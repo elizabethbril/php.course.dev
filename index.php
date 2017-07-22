@@ -7,7 +7,7 @@ require_once 'inc/data.inc.php';
 <html>
 
 	<head>
-		<title>Сайт нашей школы</title>
+		<title>Сайт нашей школы в городе Сумы</title>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
