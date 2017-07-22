@@ -1,8 +1,10 @@
 <?php
 
-function drowTable($cols = 10, $rows = 10) {
-	$cols = (int) $cols;
-	$rows = (int) $rows;
+function drowTable($cols, $rows, $color) {
+
+	if (!$cols || !$rows || !$color) {
+		return;
+	}
 	?>
 	<table border='1' width="200">
 		<?php
@@ -11,10 +13,16 @@ function drowTable($cols = 10, $rows = 10) {
 			<tr>
 				<?php
 				for ($c = 1; $c <= $cols; $c++) {
-					$class = ($r === 1 || $c === 1) ? 'th' : '';
+					if ($r === 1 || $c === 1) {
+						$class = 'th';
+						$bg = $color;
+					} else {
+						$class = '';
+						$bg = '#fff';
+					}
 					?>
-					<td class="<?php echo $class; ?>">
-					<?php echo $r * $c; ?>
+					<td style="background-color: <?php echo $bg; ?>;" class="<?php echo $class; ?>">
+						<?php echo $r * $c; ?>
 					</td>
 					<?php
 				}
