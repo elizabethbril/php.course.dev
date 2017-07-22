@@ -40,13 +40,13 @@ switch ($id) {
 		<link rel="stylesheet" href="style.css" />
 	</head>
 
-	<body>
+    <body>
 
-		<div id="header">
-			<!-- Верхняя часть страницы -->
-			<?php require_once 'inc/top.inc.php'; ?>
-			<!-- Верхняя часть страницы -->
-		</div>
+        <div id="header">
+            <!-- Верхняя часть страницы -->
+            <?php require_once 'inc/top.inc.php'; ?>
+            <!-- Верхняя часть страницы -->
+        </div>
 
 		<div id="content">
 			<!-- Заголовок -->
