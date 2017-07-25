@@ -4,7 +4,6 @@
 $day = date('j');
 $mon = date('F');
 $year = date('Y');
-
 $hour = (int) strftime("%H");
 $welcome = "";
 
