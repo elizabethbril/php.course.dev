@@ -1,9 +1,10 @@
 <!-- Область основного контента -->
+
 <?php 
 function clearData($data, $type ='i'){
-    switch($type){
-        case 'i': return $data*1;
-            break;
+    {
+         return $data*1;
+          
     }
     
 }
@@ -11,7 +12,7 @@ $output ="";
 if($_SERVER['REQUEST_METHOD']== "POST"){
     $num1 = clearData($_POST['num1']);
     $num2 = clearData($_POST['num2']);
-    $operator = clearData($_POST['operator']);
+    $operator = $_POST['operator'];
     $output = "$num1 $operator $num2 = ";
     switch ($operator){
         case '+': $output  .= $num1 + $num2;
@@ -32,7 +33,7 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
 
 ?>
 
-<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
+<form action="<?=$_SERVER['PHP_FILE']?>" method="post">
    
 	<label>Число 1:</label>
 	<br />
