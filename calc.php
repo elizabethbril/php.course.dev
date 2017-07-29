@@ -6,7 +6,6 @@ function clearData($data, $type ='i'){
          return $data*1;
           
     }
-    
 }
 $output ="";
 if($_SERVER['REQUEST_METHOD']== "POST"){

@@ -1,6 +1,7 @@
 <?php
 require_once 'inc/lib.inc.php';
 require_once 'inc/data.inc.php';
+require_once 'inc/cookie.inc.php';
 
 // Инициализация заголовков страницы
 $id = false;
@@ -50,7 +51,14 @@ switch ($id) {
 
 		<div id="content">
 			<!-- Заголовок -->
-			<h1><?php echo $welcome, "Today is {$hour} o'clock"; ?></h1>
+                         <h1><?php echo $welcome, "Today is {$hour} o'clock"; ?></h1>
+                         <blockquote><?php if($visitCounter ==1){
+                            echo "Спасибо,что зашли на огонек!";
+                        } 
+                        else{
+                            echo "Вы зашли к нам $visitCounter раз!</br>";
+                            echo "Последнее посещение:$lastVisit";
+                        }?></blockquote>
 			<!-- Заголовок -->
 			<!-- Область основного контента -->
 			<?php
